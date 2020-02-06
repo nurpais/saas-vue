@@ -62,10 +62,11 @@
                 /></a>
               </div>
               <div class="entry-content clearfix">
-                <router-link to="/blog/1"
+                <router-link :to="{ name: 'single' }"
                   ><h4 class="post_title">
                     Content Planning and Strategy
-                  </h4></router-link>
+                  </h4></router-link
+                >
 
                 <div class="post-meta text-muted mb-3">
                   <small class="author">
@@ -82,7 +83,7 @@
                 </p>
               </div>
               <!-- .entry-content -->
-              <router-link :to="{ name: 'single' }"
+              <router-link :to="{ name: 'home' }"
                 >Continue reading →</router-link
               >
             </article>

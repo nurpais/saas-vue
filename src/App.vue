@@ -2,7 +2,6 @@
   <div id="app">
     <!-- Header component -->
     <app-nav v-if="!nav" />
-
     <router-view />
     <!-- Footer component -->
     <app-footer />
@@ -21,7 +20,7 @@ export default {
   },
   computed: {
     nav() {
-      return this.$route.name === "blog";
+      return this.$route.meta.nav;
     }
   }
 };

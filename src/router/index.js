@@ -1,9 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-
 Vue.use(VueRouter);
-
 const routes = [
   {
     path: "/",
@@ -13,14 +11,27 @@ const routes = [
   {
     path: "/blog",
     name: "blog",
+    meta: {
+      nav: true
+    },
     component: () => import(/* webpackChunkName: "blog" */ "../views/Blog.vue")
+  },
+  {
+    path: "/blog/1",
+    name: "single",
+    meta: {
+      nav: true
+    },
+    component: () =>
+      import(/* webpackChunkName: "single" */ "../views/SingleBlog.vue")
   }
 ];
+
+
 
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes
 });
-
 export default router;

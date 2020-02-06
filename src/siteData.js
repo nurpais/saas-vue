@@ -52,5 +52,5 @@ export let services2 = [
 ];
 
 export let headerTitle = "Best Software Ever";
-export let headerText = "Holisticly syndicate unique technology after clicks and mortar growth strategies. Credibly expedite frictionless relationships after revolutionary."
-
+export let headerText =
+  "Holisticly syndicate unique technology after clicks and mortar growth strategies. Credibly expedite frictionless relationships after revolutionary.";
