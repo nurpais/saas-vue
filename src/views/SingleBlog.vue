@@ -41,7 +41,9 @@
       <!-- hero -->
       <section class="jumbotron sub-page text-center d-flex align-items-center">
         <div class="container">
-          <h1 class="display-4">Content Planning and Strategy</h1>
+          <h1 class="display-4">
+            Params id {{ id }}---Content Planning and Strategy
+          </h1>
           <p class="lead my-4">
             by John Mickey on July 10 • <a href="#comments">3 comments</a>
           </p>
@@ -317,3 +319,14 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: "SingleBlog",
+  computed: {
+    id() {
+      return this.$route.params;
+    }
+  }
+};
+</script>

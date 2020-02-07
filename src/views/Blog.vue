@@ -57,12 +57,15 @@
           >
             <article class="post text-center mb-5">
               <div class="post_media_wrapper">
-                <a class="title" href="blog-single.html">
+                <router-link
+                  class="title"
+                  :to="{ name: 'single', params: { id: 2 } }"
+                >
                   <img class="img-fluid" alt="thumbnail" src="images/blog-1.jpg"
-                /></a>
+                /></router-link>
               </div>
               <div class="entry-content clearfix">
-                <router-link :to="{ name: 'single' }"
+                <router-link :to="{ name: 'single', params: { id: 2 } }"
                   ><h4 class="post_title">
                     Content Planning and Strategy
                   </h4></router-link
@@ -83,7 +86,7 @@
                 </p>
               </div>
               <!-- .entry-content -->
-              <router-link :to="{ name: 'home' }"
+              <router-link :to="{ name: 'single', params: { id: 2 } }"
                 >Continue reading →</router-link
               >
             </article>
