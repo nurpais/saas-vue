@@ -42,7 +42,7 @@
       <section class="jumbotron sub-page text-center d-flex align-items-center">
         <div class="container">
           <h1 class="display-4">
-            Params id {{ id }}---Content Planning and Strategy
+            {{ post.title }}
           </h1>
           <p class="lead my-4">
             by John Mickey on July 10 • <a href="#comments">3 comments</a>
@@ -52,6 +52,7 @@
       </section>
       <!-- // end hero -->
     </header>
+
     <div class="section my-4" id="blog">
       <div class="container">
         <div class="row justify-content-center">
@@ -321,11 +322,17 @@
 </template>
 
 <script>
+import posts from "../posts";
 export default {
   name: "SingleBlog",
+  data() {
+    return {
+      post: posts[this.$route.params.id]
+    };
+  },
   computed: {
     id() {
-      return this.$route.params;
+      return this.$route.params.id;
     }
   }
 };

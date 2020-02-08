@@ -28,7 +28,6 @@ const routes = [
   }
 ];
 
-
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
@@ -37,14 +36,14 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   if (from.name == null) {
-    next()
+    next();
   } else if (!to.hash) {
-    let anime = new Anime()
+    let anime = new Anime();
     anime.run().then(() => {
       next();
     });
   } else {
-    next()
+    next();
   }
 });
 

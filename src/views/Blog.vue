@@ -52,22 +52,22 @@
         <div class="row">
           <div
             class="col-md-6 col-lg-4"
-            v-for="(item, index) in 6"
+            v-for="(item, index) in posts"
             :key="index"
           >
             <article class="post text-center mb-5">
               <div class="post_media_wrapper">
                 <router-link
                   class="title"
-                  :to="{ name: 'single', params: { id: 2 } }"
+                  :to="{ name: 'single', params: { id: item.id } }"
                 >
                   <img class="img-fluid" alt="thumbnail" src="images/blog-1.jpg"
                 /></router-link>
               </div>
               <div class="entry-content clearfix">
-                <router-link :to="{ name: 'single', params: { id: 2 } }"
+                <router-link :to="{ name: 'single', params: { id: index } }"
                   ><h4 class="post_title">
-                    Content Planning and Strategy
+                    {{ item.title }}
                   </h4></router-link
                 >
 
@@ -86,7 +86,7 @@
                 </p>
               </div>
               <!-- .entry-content -->
-              <router-link :to="{ name: 'single', params: { id: 2 } }"
+              <router-link :to="{ name: 'single', params: { id: index } }"
                 >Continue reading →</router-link
               >
             </article>
@@ -118,7 +118,13 @@
 </template>
 
 <script>
+import posts from "../posts";
 export default {
-  name: "Blog"
+  name: "Blog",
+  data() {
+    return {
+      posts
+    };
+  }
 };
 </script>

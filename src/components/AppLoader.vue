@@ -11,7 +11,7 @@
   top: 0;
   background-color: #6565fd;
   z-index: 999;
-  transform: translateX(-100%)
+  transform: translateX(-100%);
 }
 </style>
 
